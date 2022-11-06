@@ -26,11 +26,11 @@
     </style>
   </head>
   <body>
-    <main>
+    <main class="content">
       <div class="header-container">
         <h1 class="header">
           Notifications
-          <div class="notification-count"></div>
+          <span class="notification-count">3</span>
         </h1>
         <input
           type="button"
@@ -39,7 +39,7 @@
         />
       </div>
       <section class="notification-container">
-        <div class="notification-card">
+        <div class="notification-card unread">
           <img
             class="avatar-img"
             src="./assets/images/avatar-mark-webber.webp"
@@ -48,13 +48,13 @@
           <div class="card-text">
             <p class="notification">
               <span class="user">Mark Webber</span> reacted to your recent post
-              My first tournament today!
+              <span class="post-title">My first tournament today!</span>
             </p>
             <p class="elapsed-time">1m ago</p>
           </div>
         </div>
 
-        <div class="notification-card">
+        <div class="notification-card unread">
           <img
             class="avatar-img"
             src="./assets/images/avatar-angela-gray.webp"
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <div class="notification-card">
+        <div class="notification-card unread">
           <img
             class="avatar-img"
             src="./assets/images/avatar-jacob-thompson.webp"
