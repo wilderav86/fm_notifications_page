@@ -1,0 +1,53 @@
+//fonts:
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+$jakarta: "Plus Jakarta Sans", sans-serif;
+//colors:
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$white: hsl(0, 0%, 100%);
+$veryLightGrayishBlue: hsl(210, 60%, 98%);
+$lightGrayishBlue1: hsl(211, 68%, 94%);
+$lightGrayishBlue2: hsl(205, 33%, 90%);
+$grayishBlue: hsl(219, 14%, 63%);
+$darkGrayishBlue: hsl(219, 12%, 42%);
+$veryDarkBlue: hsl(224, 21%, 14%);
+
+$mobile: "min-width: 375px";
+$desktop: "min-width: 1440px";
+
+@mixin flex($direction, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+body {
+  font-family: $jakarta;
+}
+
+.header-container {
+  @include flex("column", "space-between", "center");
+}
+
+.mark-as-read-btn {
+  background: none;
+  border: none;
+  color: $darkGrayishBlue;
+}
+
+.notification-card {
+  display: flex;
+  max-width: 95%;
+}
+
+.avatar-img {
+  height: 50px;
+  width: 50px;
+}
+
+.card-text {
+  width: 80%;
+  height: auto;
+  @include flex(column, space-between, flex-start);
+}
