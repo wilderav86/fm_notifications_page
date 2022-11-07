@@ -58,7 +58,8 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.83rem;
+  font-weight: 500;
 }
 
 .notification {
@@ -67,11 +68,14 @@ body {
 
 .user {
   font-weight: 800;
+  font-size: 0.85rem;
+  color: $veryDarkBlue;
+  margin-right: 0.2rem;
 }
 
 .avatar-img {
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
   margin: 1rem;
 }
 
@@ -87,14 +91,18 @@ body {
 
 .elapsed-time {
   color: $grayishBlue;
+  margin-top: 0.25rem;
 }
 
 .group-name {
   color: $blue;
   font-weight: 800;
+  font-size: 0.9rem;
 }
 
 .post-title {
+  font-weight: 800;
+  color: $darkGrayishBlue;
 }
 
 .message {
@@ -107,4 +115,13 @@ body {
 
 .unread {
   background-color: $veryLightGrayishBlue;
+}
+
+.unread-marker {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  border-radius: 50px;
+  background-color: $red;
+  margin-left: 0.25rem;
 }
