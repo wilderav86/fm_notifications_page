@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+.user:hover,
+.mark-as-read-btn:hover,
+.group-name:hover,
+.post-title:hover {
+  cursor: pointer;
+  color: hsl(219deg, 85%, 26%);
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: hsl(211deg, 68%, 94%);
+  border-color: hsl(211deg, 68%, 94%);
+}
+
+.image-thumbnail:hover {
+  cursor: pointer;
+}
+
 html,
 body,
 p {
@@ -10,19 +28,59 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210deg, 60%, 98%);
+}
+
 .content {
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 375px) {
+  .content {
+    max-width: 610px;
+    min-height: 70%;
+  }
 }
 
 .header-container {
   display: flex;
-  flex-direction: "column";
-  justify-content: "space-between";
-  align-items: "center";
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.notification-count {
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.75rem;
+  height: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 0.75rem;
 }
 
 .mark-as-read-btn {
@@ -74,8 +132,15 @@ body {
   margin-top: 0.25rem;
 }
 
+.image-thumbnail {
+  height: 40px;
+  width: 40px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
 .group-name {
-  color: hsl(219deg, 85%, 26%);
+  color: hsl(219deg, 12%, 42%);
   font-weight: 800;
   font-size: 0.9rem;
 }

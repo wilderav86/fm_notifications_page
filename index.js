@@ -1,13 +1,11 @@
-//global variables
-
 //elements
 const notificationCards = document.querySelectorAll(".notification-card");
 const notificationCount = document.querySelector(".notification-count");
 const markAllReadBtn = document.querySelector(".mark-as-read-btn");
 const unreadMarkers = document.querySelectorAll(".unread-marker");
-//functions
 
-const handleMarkRead = () => {
+//functions
+const handleMarkAllRead = () => {
   notificationCards.forEach((card) => {
     card.classList.remove("unread");
   });
@@ -19,4 +17,5 @@ const handleMarkRead = () => {
   notificationCount.innerHTML = 0;
 };
 
-markAllReadBtn.addEventListener("click", handleMarkRead);
+//event listeners
+markAllReadBtn.addEventListener("click", handleMarkAllRead);

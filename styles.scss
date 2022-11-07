@@ -22,6 +22,25 @@ $desktop: "min-width: 1440px";
   align-items: $alignItems;
 }
 
+// hover
+.user:hover,
+.mark-as-read-btn:hover,
+.group-name:hover,
+.post-title:hover {
+  cursor: pointer;
+  color: $blue;
+}
+
+.message:hover {
+  cursor: pointer;
+  background-color: $lightGrayishBlue1;
+  border-color: $lightGrayishBlue1;
+}
+
+.image-thumbnail:hover {
+  cursor: pointer;
+}
+
 html,
 body,
 p {
@@ -33,16 +52,52 @@ body {
   font-family: $jakarta;
 }
 
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $veryLightGrayishBlue;
+}
+
 .content {
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border-radius: 0.5rem;
+
+  @media screen and ($mobile) {
+    max-width: 610px;
+    min-height: 70%;
+  }
 }
 
 .header-container {
-  @include flex("column", "space-between", "center");
+  @include flex(row, space-between, center);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.notification-count {
+  @include flex(normal, center, center);
+  background-color: $blue;
+  color: $white;
+  font-size: 0.75rem;
+  height: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 0.75rem;
 }
 
 .mark-as-read-btn {
@@ -94,8 +149,15 @@ body {
   margin-top: 0.25rem;
 }
 
+.image-thumbnail {
+  height: 40px;
+  width: 40px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
 .group-name {
-  color: $blue;
+  color: $darkGrayishBlue;
   font-weight: 800;
   font-size: 0.9rem;
 }
